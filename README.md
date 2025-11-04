@@ -1,23 +1,22 @@
-# Explainer for the TODO API
+# Explainer for the Template Attributes API
 
 **Instructions for the explainer author: Search for "todo" in this repository and update all the
 instances as appropriate. For the instances in `index.bs`, update the repository name, but you can
 leave the rest until you start the specification. Then delete the TODOs and this block of text.**
 
-This proposal is an early design sketch by [TODO: team] to describe the problem below and solicit
-feedback on the proposed solution. It has not been approved to ship in Chrome.
+This proposal outlines an early design for an API which allows web applications to supply static and dynamic data to an instance of a `<template>` element in a cross-runtime, cross-environment manner. It is tentatively named **Template Attributes** and introduces a `template-` attribute and corresponding ECMAScript API. By doing so, it removes the need to standardize any domain-specific language (Handlebars, Jinja, etc), standardizes a mechanism for hydration, and supports addition stages beyond the current one or two-stage models currently in use by the web development community.
+
+As of November 4th, 2025, it has not been implemented natively in any browsers, and has not been supported or condoned by any organization. Although a polyfill is available, users should remember this is an experimental proposal.
 
 TODO: Fill in the whole explainer template below using https://tag.w3.org/explainers/ as a
 reference. Look for [brackets].
 
 ## Proponents
 
-- [Proponent team 1]
-- [Proponent team 2]
-- [etc.]
+- [Alex Shaw](alex.shaw.as@gmail.com) (GitHub username @Symbitic)
 
 ## Participate
-- https://github.com/explainers-by-googlers/[your-repository-name]/issues
+- https://github.com/Symbitic/template-attributes-explainer/issues
 - [Discussion forum]
 
 ## Table of Contents [if the explainer is longer than one printed page]
@@ -50,6 +49,10 @@ reference. Look for [brackets].
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Introduction
+
+Custom elements (aka Web Components) have inspired a revolution in web application development. New frameworks continue to regularly emerge, ranging from 3D game development (A-Frame, XR-Tag) to compilers (WebC, Stencil) to React-like "hook" libraries. Besides the ease of writing once in JavaScript and then using HTML tags, they have been described as the only truely future-proof web framework, since they are guaranteed to work indefinitely and don't require learning any non-web APIs.
+
+One problem that every library or framework confronts eventually is that 
 
 [The "executive summary" or "abstract".
 Explain in a few sentences what the goals of the project are,
