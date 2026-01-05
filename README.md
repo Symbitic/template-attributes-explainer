@@ -6,7 +6,7 @@ leave the rest until you start the specification. Then delete the TODOs and this
 
 This proposal outlines an early design for an API which allows web applications to supply static and dynamic data to an instance of a `<template>` element in a cross-runtime, cross-environment manner. It is tentatively named **Template Attributes** and introduces a `template-` attribute and corresponding ECMAScript API. By doing so, it removes the need to standardize any domain-specific language (Handlebars, Jinja, etc), standardizes a mechanism for hydration, and supports addition stages beyond the current one or two-stage models currently in use by the web development community.
 
-As of November 4th, 2025, it has not been implemented natively in any browsers, and has not been supported or condoned by any organization. Although a polyfill is available, users should remember this is an experimental proposal.
+As of the most recent revision of this document (January 5th, 2026), it has not been implemented natively in any browsers, and has not been supported or condoned by any organization. Although a polyfill is available, users should remember this is an experimental proposal.
 
 TODO: Fill in the whole explainer template below using https://tag.w3.org/explainers/ as a
 reference. Look for [brackets].
@@ -50,6 +50,8 @@ reference. Look for [brackets].
 
 ## Introduction
 
+The Template Attributes API provides a mechanism for supplying `<template>` element instances with data provided by the developer. This not only increases the usefulness of templates, it effectively solves the issue of hydration in web components by providing a means for updating a template instance after it has been created. 
+
 Custom elements (aka Web Components) have inspired a revolution in web application development. New frameworks continue to regularly emerge, ranging from 3D game development (A-Frame, XR-Tag) to compilers (WebC, Stencil) to React-like "hook" libraries. Besides the ease of writing once in JavaScript and then using HTML tags, they have been described as the only truely future-proof web framework, since they are guaranteed to work indefinitely and don't require learning any non-web APIs.
 
 One problem that every library or framework confronts eventually is that 
@@ -68,6 +70,8 @@ elaborate in the Use cases section.]
 
 [If there are "adjacent" goals which may appear to be in scope but aren't,
 enumerate them here. This section may be fleshed out as your design progresses and you encounter necessary technical and other trade-offs.]
+
+- 
 
 ## User research
 
